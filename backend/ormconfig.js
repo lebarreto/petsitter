@@ -5,10 +5,10 @@ module.exports = {
   "username": process.env.DB_USER,
   "password": process.env.DB_PASS,
   "database": process.env.DB_NAME,
-  "entities": ["./src/modules/**/infra/typeorm/entities/*.ts"],
-  "migrations": ["./src/shared/infra/typeorm/migrations/*.ts"],
+  "entities": [process.env.DB_ENTITIES],
+  "migrations": [process.env.DB_MIGRATIONS],
   "cli": {
-    "migrationsDir": "./src/shared/infra/typeorm/migrations"
+    "migrationsDir": process.env.DB_MIGRATIONS_DIR
   },
   "ssl": true,
   "dialectOptions": {
