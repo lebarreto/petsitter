@@ -11,4 +11,11 @@ module.exports = {
     "migrationsDir": "./src/shared/infra/typeorm/migrations"
   },
   "ssl": true,
+  "dialectOptions": {
+    "ssl": {
+      "require": true,
+      "rejectUnauthorized": false,
+    },
+    "keepAlive": true,
+  },
 }
