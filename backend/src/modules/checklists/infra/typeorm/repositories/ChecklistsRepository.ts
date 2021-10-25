@@ -1,8 +1,8 @@
 import { getRepository, Repository } from 'typeorm';
 
 import Checklists from '../entities/Checklists';
-import IChecklistsRepository from '@modules/checklists/repositories/IChecklistsRepository';
-import ICreateChecklistsDTO from '@modules/checklists/dtos/ICreateChecklistsDTO';
+import IChecklistsRepository from '../../../../../modules/checklists/repositories/IChecklistsRepository';
+import ICreateChecklistsDTO from '../../../../../modules/checklists/dtos/ICreateChecklistsDTO';
 
 class ChecklistsRepository implements IChecklistsRepository {
   private ormRepository: Repository<Checklists>;

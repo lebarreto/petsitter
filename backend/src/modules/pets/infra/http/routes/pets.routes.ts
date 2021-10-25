@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
 
 import PetsController from '../controllers/PetsController';
-import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
+import ensureAuthenticated from '../../../../../modules/users/infra/http/middlewares/ensureAuthenticated';
 
 const petsRouter = Router();
 const petsController = new PetsController();

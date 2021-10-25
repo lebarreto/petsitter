@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
 
-import AppError from '@shared/errors/AppError';
-import IPetsRepository from '@modules/pets/repositories/IPetsRepository';
+import AppError from '../../../shared/errors/AppError';
+import IPetsRepository from '../../../modules/pets/repositories/IPetsRepository';
 import IFindPetByOwnerDTO from '../dtos/IFindPetByOwnerDTO';
 
 interface IRequest {

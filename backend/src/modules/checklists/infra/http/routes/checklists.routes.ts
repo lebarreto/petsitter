@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { celebrate, Segments, Joi } from 'celebrate';
 
 import ChecklistsController from '../controllers/ChecklistsController';
-import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated';
+import ensureAuthenticated from '../../../../../modules/users/infra/http/middlewares/ensureAuthenticated';
 
 const checklistsRouter = Router();
 const checklistsController = new ChecklistsController();

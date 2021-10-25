@@ -1,9 +1,9 @@
 import { getRepository, Repository } from 'typeorm';
 
 import Pets from '../entities/Pets';
-import IPetsRepository from '@modules/pets/repositories/IPetsRepository';
-import ICreatePetDTO from '@modules/pets/dtos/ICreatePetDTO';
-import IFindPetByOwnerDTO from '@modules/pets/dtos/IFindPetByOwnerDTO';
+import IPetsRepository from '../../../../../modules/pets/repositories/IPetsRepository';
+import ICreatePetDTO from '../../../../../modules/pets/dtos/ICreatePetDTO';
+import IFindPetByOwnerDTO from '../../../../../modules/pets/dtos/IFindPetByOwnerDTO';
 
 class PetsRepository implements IPetsRepository {
   private ormRepository: Repository<Pets>;

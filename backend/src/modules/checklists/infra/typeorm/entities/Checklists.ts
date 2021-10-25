@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import Users from '@modules/users/infra/typeorm/entities/Users';
-import Pets from '@modules/pets/infra/typeorm/entities/Pets';
+import Users from '../../../../../modules/users/infra/typeorm/entities/Users';
+import Pets from '../../../../../modules/pets/infra/typeorm/entities/Pets';
 
 @Entity('checklists')
 class Checklists {

@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import Users from '@modules/users/infra/typeorm/entities/Users';
+import Users from '../../../../../modules/users/infra/typeorm/entities/Users';
 
 @Entity('pets')
 class Pets {

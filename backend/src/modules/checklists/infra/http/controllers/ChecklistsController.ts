@@ -2,9 +2,9 @@ import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { classToClass } from 'class-transformer';
 
-import CreateChecklistsService from '@modules/checklists/services/CreateChecklistsService';
-import AppError from '@shared/errors/AppError';
-import ListChecklistsService from '@modules/checklists/services/ListChecklistsService';
+import CreateChecklistsService from '../../../../../modules/checklists/services/CreateChecklistsService';
+import AppError from '../../../../../shared/errors/AppError';
+import ListChecklistsService from '../../../../../modules/checklists/services/ListChecklistsService';
 
 export default class ChecklistsController {
   public async create(request: Request, response: Response): Promise<Response> {

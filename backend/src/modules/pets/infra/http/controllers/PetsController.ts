@@ -2,9 +2,8 @@ import { Request, Response } from 'express';
 import { container } from 'tsyringe';
 import { classToClass } from 'class-transformer';
 
-import CreatePetService from '@modules/pets/services/CreatePetService';
-import ListPetByOwnerService from '@modules/pets/services/ListPetByOwnerService';
-import AppError from '@shared/errors/AppError';
+import CreatePetService from '../../../../../modules/pets/services/CreatePetService';
+import ListPetByOwnerService from '../../../../../modules/pets/services/ListPetByOwnerService';
 
 export default class PetsController {
   public async create(request: Request, response: Response): Promise<Response> {
