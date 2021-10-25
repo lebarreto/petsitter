@@ -7,7 +7,7 @@
     "build": "tsc",
     "dev:server": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore node_modules src/shared/infra/http/server.ts",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
-    "start": "node src/shared/infra/http/server.ts"
+    "start": "node --experimental-modules src/shared/infra/http/server.mjs"
   },
   "keywords": [],
   "author": "Letícia Moreira Barreto",
