@@ -7,11 +7,11 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { errors } from 'celebrate';
 
-import '@shared/infra/typeorm';
-import '@shared/container';
+import '../../../shared/infra/typeorm';
+import '../../../shared/container';
 
-import AppError from '@shared/errors/AppError';
-import routes from '@shared/infra/http/routes';
+import AppError from '../../../shared/errors/AppError';
+import routes from '../../../shared/infra/http/routes';
 
 const app = express();
 const port = process.env.PORT || 3334;
