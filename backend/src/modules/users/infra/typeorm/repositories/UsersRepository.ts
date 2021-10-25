@@ -1,9 +1,12 @@
-import { getRepository, Repository } from 'typeorm';
+import { EntityRepository, getRepository, Repository } from 'typeorm';
+import { injectable } from 'tsyringe';
 
 import Users from '../entities/Users';
 import IUsersRepository from '../../../../../modules/users/repositories/IUsersRepository';
 import ICreateUsersDTO from '../../../../../modules/users/dtos/ICreateUsersDTO';
 
+@injectable()
+@EntityRepository()
 class UsersRepository implements IUsersRepository {
   private ormRepository: Repository<Users>;
 
@@ -46,3 +49,7 @@ class UsersRepository implements IUsersRepository {
 }
 
 export default UsersRepository;
+function Injectable() {
+  throw new Error('Function not implemented.');
+}
+
