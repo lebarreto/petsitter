@@ -6,7 +6,7 @@ import IUsersRepository from '../../../../../modules/users/repositories/IUsersRe
 import ICreateUsersDTO from '../../../../../modules/users/dtos/ICreateUsersDTO';
 
 @injectable()
-@EntityRepository()
+@EntityRepository(Users)
 class UsersRepository implements IUsersRepository {
   private ormRepository: Repository<Users>;
 
