@@ -8,7 +8,7 @@ import cors from 'cors';
 import { errors } from 'celebrate';
 
 import '../../../shared/infra/typeorm';
-import '../../../shared/container';
+import '../../container';
 
 import AppError from '../../../shared/errors/AppError';
 import routes from '../../../shared/infra/http/routes';
