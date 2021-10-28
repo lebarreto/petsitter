@@ -1,10 +1,11 @@
 module.exports = {
   "type": "postgres",
   "url": process.env.DATABASE_URL,
-  "entities": [process.env.ENTITIES],
-  "migrations": [process.env.DB_MIGRATIONS],
+  "entities": ['src/modules/**/infra/typeorm/entities/*.js'],
+  "migrations": ['dist/shared/infra/typeorm/migrations/*.js'],
   "cli": {
-    "migrationsDir": process.env.DB_MIGRATIONS_DIR
+    "migrationsDir": ['src/shared/infra/typeorm/migrations/'],
+    "entitiesDir": ['src/modules/**/infra/typeorm/entities']
   },
   "ssl": true,
   "dialectOptions": {
