@@ -11,17 +11,17 @@ import PetsRepository from '../../modules/pets/infra/typeorm/repositories/PetsRe
 import IChecklistsRepository from '../../modules/checklists/repositories/IChecklistsRepository';
 import ChecklistsRepository from '../../modules/checklists/infra/typeorm/repositories/ChecklistsRepository';
 
-container.registerSingleton<IUsersRepository>(
+container.register<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
 );
 
-container.registerSingleton<IPetsRepository>(
+container.register<IPetsRepository>(
   'PetsRepository',
   PetsRepository,
 );
 
-container.registerSingleton<IChecklistsRepository>(
+container.register<IChecklistsRepository>(
   'ChecklistsRepository',
   ChecklistsRepository,
 );

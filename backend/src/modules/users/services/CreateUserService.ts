@@ -1,4 +1,4 @@
-import { inject, injectable, registry, delay } from 'tsyringe';
+import { inject, injectable } from 'tsyringe';
 
 import Users from '../infra/typeorm/entities/Users';
 import AppError from '../../../shared/errors/AppError';
@@ -13,12 +13,6 @@ interface IRequest {
 }
 
 @injectable()
-@registry([
-  {
-    token: "UsersRepository",
-    useToken: delay(() => Users)
-  }
-])
 export default class CreateUserService {
   private userRepository: IUsersRepository;
   private hashProvider: IHashProvider;
@@ -43,7 +37,7 @@ export default class CreateUserService {
 
     const hashedPassword = await this.hashProvider.generateHash(password);
 
-    const user = await this.userRepository.createUser({
+    const user = await this.userRepository.create({
       name,
       admin,
       email,
