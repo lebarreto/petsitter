@@ -7,10 +7,11 @@ import ICreateUsersDTO from '../../../../../modules/users/dtos/ICreateUsersDTO';
 
 @injectable()
 @EntityRepository(Users)
-class UsersRepository implements IUsersRepository {
+class UsersRepository extends Repository<Users> {
   private ormRepository: Repository<Users>;
 
   constructor() {
+    super();
     this.ormRepository = getRepository(Users);
   }
 
@@ -30,7 +31,7 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  public async create({
+  public async createUser({
     name,
     email,
     password,
@@ -43,13 +44,10 @@ class UsersRepository implements IUsersRepository {
     return user;
   }
 
-  public async save(user: Users): Promise<Users> {
+  public async saveUser(user: Users): Promise<Users> {
     return this.ormRepository.save(user);
   }
 }
 
 export default UsersRepository;
-function Injectable() {
-  throw new Error('Function not implemented.');
-}
 

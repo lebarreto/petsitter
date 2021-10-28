@@ -43,7 +43,7 @@ export default class CreateUserService {
 
     const hashedPassword = await this.hashProvider.generateHash(password);
 
-    const user = await this.userRepository.create({
+    const user = await this.userRepository.createUser({
       name,
       admin,
       email,
