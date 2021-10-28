@@ -7,11 +7,11 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { errors } from 'celebrate';
 
-import '../../../shared/infra/typeorm';
+import '../typeorm';
 import '../../container';
 
-import AppError from '../../../shared/errors/AppError';
-import routes from '../../../shared/infra/http/routes';
+import AppError from '../../errors/AppError';
+import routes from './routes';
 
 dotenv.config();
 
