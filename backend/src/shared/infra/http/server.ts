@@ -1,5 +1,5 @@
+import dotenv from 'dotenv';
 import 'reflect-metadata';
-import 'dotenv/config';
 import 'express-async-errors';
 
 
@@ -12,6 +12,8 @@ import '../../../shared/container';
 
 import AppError from '../../../shared/errors/AppError';
 import routes from '../../../shared/infra/http/routes';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3334;
