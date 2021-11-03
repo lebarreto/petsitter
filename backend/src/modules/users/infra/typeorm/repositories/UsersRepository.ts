@@ -1,7 +1,7 @@
 import { EntityRepository, getRepository, Repository } from 'typeorm';
 import { injectable } from 'tsyringe';
 
-import Users from '../entities/Users';
+import Users from '../entities/User';
 import IUsersRepository from '../../../../../modules/users/repositories/IUsersRepository';
 import ICreateUsersDTO from '../../../../../modules/users/dtos/ICreateUsersDTO';
 

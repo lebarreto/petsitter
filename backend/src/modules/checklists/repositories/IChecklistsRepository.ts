@@ -1,4 +1,4 @@
-import Checklists from "../infra/typeorm/entities/Checklists";
+import Checklists from "../infra/typeorm/entities/Checklist";
 import ICreateChecklistsDTO from "../dtos/ICreateChecklistsDTO";
 
 export default interface IChecklistsRepository {

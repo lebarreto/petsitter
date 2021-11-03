@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 
-import Pets from '../infra/typeorm/entities/Pets';
+import Pets from '../infra/typeorm/entities/Pet';
 import IPetsRepository from '../../../modules/pets/repositories/IPetsRepository';
 
 interface IRequest {

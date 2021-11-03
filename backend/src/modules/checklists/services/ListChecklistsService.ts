@@ -1,6 +1,6 @@
 import { inject, injectable } from 'tsyringe';
 
-import Checklists from '../infra/typeorm/entities/Checklists';
+import Checklists from '../infra/typeorm/entities/Checklist';
 import IChecklistsRepository from '../repositories/IChecklistsRepository';
 
 interface IRequest {

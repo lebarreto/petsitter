@@ -1,4 +1,4 @@
-import Pets from "../infra/typeorm/entities/Pets";
+import Pets from "../infra/typeorm/entities/Pet";
 import ICreatePetDTO from "../dtos/ICreatePetDTO";
 import IFindPetByOwnerDTO from "../dtos/IFindPetByOwnerDTO";
 

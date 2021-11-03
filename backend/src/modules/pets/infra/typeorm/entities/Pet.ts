@@ -1,9 +1,9 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import Users from '../../../../../modules/users/infra/typeorm/entities/Users';
+import Users from '../../../../users/infra/typeorm/entities/User';
 
 @Entity('pets')
-class Pets {
+class Pet {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -24,4 +24,4 @@ class Pets {
     updated_at: Date;
 }
 
-export default Pets;
+export default Pet;

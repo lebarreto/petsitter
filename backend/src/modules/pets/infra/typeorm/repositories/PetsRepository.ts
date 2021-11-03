@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm';
 
-import Pets from '../entities/Pets';
+import Pets from '../entities/Pet';
 import IPetsRepository from '../../../../../modules/pets/repositories/IPetsRepository';
 import ICreatePetDTO from '../../../../../modules/pets/dtos/ICreatePetDTO';
 import IFindPetByOwnerDTO from '../../../../../modules/pets/dtos/IFindPetByOwnerDTO';

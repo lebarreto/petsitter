@@ -1,10 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
 
-import Users from '../../../../../modules/users/infra/typeorm/entities/Users';
-import Pets from '../../../../../modules/pets/infra/typeorm/entities/Pets';
+import Users from '../../../../users/infra/typeorm/entities/User';
+import Pets from '../../../../pets/infra/typeorm/entities/Pet';
 
 @Entity('checklists')
-class Checklists {
+class Checklist {
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -32,4 +32,4 @@ class Checklists {
     updated_at: Date;
 }
 
-export default Checklists;
+export default Checklist;
