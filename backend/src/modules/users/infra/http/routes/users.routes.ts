@@ -19,4 +19,10 @@ usersRouter.post(
   usersController.create,
 );
 
+
+usersRouter.get(
+  '/teste',
+  usersController.test,
+);
+
 export default usersRouter;

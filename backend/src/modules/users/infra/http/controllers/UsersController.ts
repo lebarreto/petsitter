@@ -17,4 +17,8 @@ export default class UsersController {
 
     return response.json(classToClass(user));
   }
+
+  public async test(request: Request, response: Response): Promise<Response> {
+    return response.json('testeeee');
+  }
 }
