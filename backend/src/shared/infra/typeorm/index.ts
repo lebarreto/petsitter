@@ -1,12 +1,10 @@
 import { createConnection } from 'typeorm';
-import Checklist from '@modules/checklists/infra/typeorm/entities/Checklist';
-import Pet from '@modules/pets/infra/typeorm/entities/Pet';
-import User from '@modules/users/infra/typeorm/entities/User';
 
 createConnection({
   type: 'postgres',
-  database: 'dep2o78ptojiem',
-  synchronize: true,
-  logging: true,
-  entities: [User, Pet, Checklist],
+  url: 'postgres://ftwhqmngnwkazw:fe19f877eced64efc07f777ed2ef198b831538e5654a68a47131ea52cd0917e5@ec2-52-201-72-91.compute-1.amazonaws.com:5432/dep2o78ptojiem',
+  extra: {
+    ssl: true,
+    rejectUnauthorized: false
+  },
 });
