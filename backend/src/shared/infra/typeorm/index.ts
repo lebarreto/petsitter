@@ -7,4 +7,5 @@ createConnection({
     ssl: true,
     rejectUnauthorized: false
   },
+  entities: ['../../../modules/**/infra/typeorm/entities/*.js']
 });
